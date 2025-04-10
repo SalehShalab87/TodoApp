@@ -1,0 +1,7 @@
+<li *ngFor="let todo of todoService.getTodos()">
+  <input type="checkbox" [checked]="todo.isCompleted" (change)="toggle(todo)" />
+
+  <span> {{ todo.title }} - {{ todo.isCompleted | status }} </span>
+
+  <button (click)="delete(todo)">❌</button>
+</li>
